@@ -1,12 +1,13 @@
 ﻿using Microsoft.Extensions.Configuration;
 using SpotifyAPI.Web;
 using System;
+using System.Collections.Generic;
 
 namespace SpotifyAccountTransfer
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("Hello World! This is the development branch.");
 
@@ -14,14 +15,26 @@ namespace SpotifyAccountTransfer
                 .AddJsonFile("appsettings.json", true, true)
                 .Build();
 
+            // Apple Music
 
+
+
+
+            // Spotify
+            
             string token = config["Token"];
-            var spotify = new SpotifyClient(token);
+            SpotifyClient spotify = new SpotifyClient(token);
+
+            SearchRequest request = new SearchRequest(SearchRequest.Types.Track, "Caroline Neil Diamond");
+            SearchClient client = (SearchClient)spotify.Search;
+            SearchResponse response = client.Item(request).Result;
 
 
-            var allMyTracks = spotify.Library.GetTracks().Result;
-            var track = spotify.Tracks.Get("1s6ux0lNiTziSrd7iUAADH");
-            Console.WriteLine(track.Result.Name);
-        }
+            string trackId = response.Tracks.Items[0].Id;
+
+            LibrarySaveTracksRequest saveRequest = new LibrarySaveTracksRequest(new List<string> { trackId });
+            var a = spotify.Library.SaveTracks(saveRequest).Result;
+            Console.WriteLine(a);
+        }      
     }
 }
