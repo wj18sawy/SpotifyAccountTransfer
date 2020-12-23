@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotifyAccountTransfer", "SpotifyAccountTransfer.csproj", "{ECF1EC56-79D9-4BF2-BF4D-8808998DDFC2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECF1EC56-79D9-4BF2-BF4D-8808998DDFC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECF1EC56-79D9-4BF2-BF4D-8808998DDFC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECF1EC56-79D9-4BF2-BF4D-8808998DDFC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECF1EC56-79D9-4BF2-BF4D-8808998DDFC2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {126E5182-1E38-41ED-8526-B0DF98E3F93D}
+	EndGlobalSection
+EndGlobal
